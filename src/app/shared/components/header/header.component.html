@@ -1,0 +1,40 @@
+<header>
+  <nav>
+    <!-- Logo -->
+    <div class="logo-container">
+      <a routerLink="/home">
+        <img src="assets/images/logo.png" alt="Qlementine" />
+      </a>
+    </div>
+
+    <!-- Botón Menú Hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <!-- Menú de Navegación -->
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
+      <li><a routerLink="/products" routerLinkActive="active">Catálogo</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">Nosotros</a></li>
+      <li><a routerLink="/faq" routerLinkActive="active">FAQ</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+    </ul>
+
+    <!-- Íconos de Redes Sociales y Carrito -->
+    <div class="nav-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <img src="assets/icons/qlementine-icons--facebook-16.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="assets/icons/lineicons--instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+        <img src="assets/icons/proicons--tiktok.svg" alt="TikTok" />
+      </a>
+      <a routerLink="/cart" routerLinkActive="active" aria-label="Carrito de Compras">
+        <img src="assets/icons/ant-design_shopping-cart-outlined.svg" alt="Carrito" />
+      </a>
+    </div>
+  </nav>
+</header>
