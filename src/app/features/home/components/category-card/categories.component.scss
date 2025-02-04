@@ -1,0 +1,16 @@
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.category-card {
+  background-color: #A63C58;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

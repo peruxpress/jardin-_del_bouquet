@@ -1,0 +1,8 @@
+<div class="category-list">
+  @for (category of categories(); track $index) {
+    <div class="category-card">
+      <h3>{{ category.nombre }}</h3>
+      <p>{{ category.descripcion }}</p>
+    </div>
+  }
+</div>
