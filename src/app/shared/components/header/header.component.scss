@@ -1,24 +1,17 @@
+@import "../../../../styles.scss";
+
 /* Variables */
-$primary-color: #333;
 $background-color: #fff;
-$hover-color: #ff6600;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$fontPrimary: 'Poppins', sans-serif;
 
 /* Breakpoints */
 $mobile: 768px;
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* HEADER */
 header {
   background: $background-color;
   padding: 15px 20px;
-  box-shadow: $box-shadow;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -47,12 +40,13 @@ nav {
     li {
       a {
         text-decoration: none;
-        color: $primary-color;
+        color: $text-dark;
         font-weight: bold;
         transition: 0.3s;
 
         &:hover {
-          color: $hover-color;
+          color: $accent-medium;
+          cursor: pointer;
         }
       }
     }
@@ -61,11 +55,17 @@ nav {
   /* ICONOS DE REDES SOCIALES */
   .nav-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 
     a {
       display: flex;
       align-items: center;
+      margin: 0;
+
+      // Ultimo elemento
+      &:last-child {
+        margin-left: 10px;
+      }
     }
 
     img {

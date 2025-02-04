@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Fuente Global
+$fontPrimary: 'Poppins', sans-serif;
+
+// 🎨 Variables de colores
+$primary-light: #F2F2F2; // Fondo principal
+$text-dark: #40010D; // Texto principal
+$accent-medium: #A63C58; // Botones y destacados
+$highlight: #F26398; // Resaltes en links/botones secundarios
+$warning: #BFB636; // Alertas y pequeños acentos
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontPrimary;
+}
+
+
+// 🖥️ Estilos globales
+body {
+  background-color: $primary-light;
+  color: $text-dark;
+  margin: 0;
+  padding: 0;
+}
+
+// 🌐 Estilos de enlaces
+a {
+  color: $highlight;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($highlight, 10%);
+  }
+}
+
+// 🎨 Botones generales
+button {
+  background-color: $accent-medium;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-medium, 10%);
+  }
+
+  &.secondary {
+    background-color: $highlight;
+
+    &:hover {
+      background-color: darken($highlight, 10%);
+    }
+  }
+}
+
+// 🔔 Alertas y mensajes importantes
+.alert {
+  background-color: $warning;
+  color: $text-dark;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  margin-bottom: 3rem;
+}

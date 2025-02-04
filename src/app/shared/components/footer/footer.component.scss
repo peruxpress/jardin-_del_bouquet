@@ -1,0 +1,58 @@
+@import "../../../../styles.scss";
+
+
+// 📦 Estilos del Footer
+footer {
+  background-color: lighten($primary-light, 5%);
+  color: $text-dark;
+  padding: 15px;
+  font-size: 14px;
+
+  padding: 3.5em;
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    section {
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        color: #adabab;
+        font-weight: 500;
+      }
+
+      h2.nameFooter {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        font-weight: bold;
+        color: $text-dark;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 2.5rem;
+
+          a {
+            text-decoration: none;
+            color: $text-dark;
+            transition: 0.3s;
+
+            &:hover {
+              color: $accent-medium;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
