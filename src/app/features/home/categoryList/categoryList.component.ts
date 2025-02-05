@@ -1,14 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { CategoryService } from '../../../../core/services/category.service';
+import { CategoryService } from '../../../core/services/category.service';
 
 @Component({
-  selector: 'app-categories',
+  selector: 'app-category-list',
   standalone: true,
   imports: [],
-  templateUrl: './categories.component.html',
-  styleUrl: './categories.component.scss',
+  templateUrl: './categoryList.component.html',
+  styleUrl: './categoryList.component.scss',
 })
-export class CategoriesComponent implements OnInit {
+export class CategoryListComponent implements OnInit {
   categoryService = inject(CategoryService);
   categories = this.categoryService.getCategories();
 

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CategoriesComponent } from './components/category-card/categories.component';
+import { CategoryListComponent } from '../categoryList/categoryList.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CategoriesComponent],
+  imports: [CategoryListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
