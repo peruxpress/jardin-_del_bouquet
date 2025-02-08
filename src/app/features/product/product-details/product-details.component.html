@@ -1,1 +1,38 @@
-<p>product-details works!</p>
+<main class="product-details__container">
+  <section class="product-details__images">
+    <div class="image-secondary">
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+    </div>
+
+    <div class="image-primary">
+      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+    </div>
+  </section>
+
+  <aside class="product-details__content">
+    <h1 class="product-details__title">{{ "Product Title" | titlecase }}</h1>
+    <p class="product-details__price">{{ 123 | currency }}</p>
+    <p class="product-details__description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      pariatur vitae atque fugiat illum sunt, ipsa ipsam quo voluptatum dolorem.
+      Eveniet, repellat itaque eum veritatis ipsam quia voluptatibus quidem
+      consectetur?
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="product-details__btns">
+      <div class="item-btns qty-btns">
+        <button class="btn btn-secondary btn-qty">-</button>
+        <span class="qty-view">1</span>
+        <button class="btn btn-secondary btn-qty">+</button>
+      </div>
+      <button class="item-btns btn btn-primary">AGREGAR AL CARRITO</button>
+      <button class="item-btns btn btn-secondary">COMPRAR AHORA</button>
+    </div>
+  </aside>
+</main>

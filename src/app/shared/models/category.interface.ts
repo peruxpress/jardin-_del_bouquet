@@ -3,6 +3,7 @@ export interface Category {
   id: number;
   nombre: string;
   descripcion: string;
+  imagenURL: string;
 }
 
 // 📌 Interface para la solicitud de creación de categoría

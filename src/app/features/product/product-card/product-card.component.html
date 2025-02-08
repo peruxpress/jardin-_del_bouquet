@@ -1,1 +1,21 @@
-<p>product-card works!</p>
+<div class="product-card">
+  <div class="product-card__image">
+    <img
+      [src]="product.imagenURL"
+      [alt]="product.nombre"
+      onerror="this.onerror=null;
+      this.src='assets/images/image-not-found.webp'"
+    />
+    <div class="product-card__hover">
+      <button class="product-card__button" (click)="addToCart(product)">
+        AÑADIR AL CARRITO
+      </button>
+    </div>
+  </div>
+  <div class="product-card__content">
+    <h3 class="product-card__title">{{ product.nombre }}</h3>
+    <p class="product-card__price">
+      {{ product.precio | currency }}
+    </p>
+  </div>
+</div>

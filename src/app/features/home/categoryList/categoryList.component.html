@@ -1,6 +1,7 @@
 <div class="category-list">
-  @for (category of categories(); track $index) {
+  @for (category of categories; track $index) {
     <div class="category-card">
+      <img src="{{category.imagenURL}}" alt="" style="width: max-content;">
       <h3>{{ category.nombre }}</h3>
       <p>{{ category.descripcion }}</p>
     </div>
