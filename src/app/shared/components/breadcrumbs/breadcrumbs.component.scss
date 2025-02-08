@@ -1,0 +1,25 @@
+@use "../../../../assets/styles/variables" as *;
+
+nav {
+  background-color: $bg-test;
+  padding: 1rem 2rem;
+
+  ul {
+    display: flex;
+    gap: 0.5rem;
+
+    li {
+      font-size: 1rem;
+      color: #666;
+
+      &:last-child {
+        font-weight: bold;
+      }
+
+      &:not(:last-child):after {
+        content: '>';
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
