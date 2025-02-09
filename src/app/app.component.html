@@ -1,5 +1,15 @@
 <main>
-  <app-header></app-header>
+  @if (openCart) {
+    <div
+      class="cart-container"
+      (click)="toggleCart()"
+      (keyup.enter)="toggleCart()"
+      tabindex="0"
+    >
+      <app-cart (closeCart)="toggleCart()"></app-cart>
+    </div>
+  }
+  <app-header (openCart)="toggleCart()"></app-header>
   <app-breadcrumbs></app-breadcrumbs>
   <router-outlet />
   <app-footer></app-footer>

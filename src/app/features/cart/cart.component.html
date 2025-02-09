@@ -1,1 +1,31 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <div class="cart-header">
+    <h1>Carrito de Compras</h1>
+    <button class="checkout-button" (click)="onClose()">Cerrar</button>
+  </div>
+  <div class="divider"></div>
+  <div class="cart-items">
+    <!-- Ejemplo de un item de producto -->
+    <div class="cart-item">
+      <img src="../../../assets/images/image-not-found.webp" alt="Producto" class="product-image">
+      <div class="product-details">
+        <h2 class="product-title">{{ "Título del Producto" | uppercase }} </h2>
+        <div class="product-qty-price">
+          <p class="product-quantity">Cantidad: 1</p>
+          <p class="product-price">$10.00</p>
+        </div>
+      </div>
+      <button class="remove-button">X</button>
+    </div>
+    <!-- ...repetir para cada producto en el carrito... -->
+  </div>
+  <div class="cart-footer">
+    <div class="total-container">
+      <p class="total-text">Total:</p>
+      <p class="total-price">$10.00</p>
+    </div>
+    <div class="divider"></div>
+    <button class="checkout-button">Comprar</button>
+  </div>
+</div>
+
