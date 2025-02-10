@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { OrderListComponent } from '../orders/order-list/order-list.component';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, OrderListComponent],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss',
 })
