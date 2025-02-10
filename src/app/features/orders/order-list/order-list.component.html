@@ -1,27 +1,21 @@
-  <div class="cart-items">
+<div class="cart-items">
 
-    <!-- Ejemplo de un item de producto -->
+  @for (cartItem of cartItems() || []; track $index) {
     <div class="cart-item">
-      <img src="../../../assets/images/image-not-found.webp" alt="Producto" class="product-image">
+      <img
+        [src]="cartItem.product.imagenURL"
+        [alt]="cartItem.product.nombre"
+        class="product-image"
+      />
       <div class="product-details">
-        <h2 class="product-title">{{ "Título del Producto" | uppercase }} </h2>
+        <h2 class="product-title">{{ cartItem.product.nombre | uppercase }}</h2>
         <div class="product-qty-price">
-          <p class="product-quantity">Cantidad: 1</p>
-          <p class="product-price">$10.00</p>
+          <p class="product-quantity">Cantidad: <span class="qty-number"> {{ cartItem.quantity }} </span> </p>
+          <p class="product-price">S/ {{ cartItem.product.precio }} </p>
         </div>
       </div>
       <button class="remove-button">X</button>
     </div>
-    <div class="cart-item">
-      <img src="../../../assets/images/image-not-found.webp" alt="Producto" class="product-image">
-      <div class="product-details">
-        <h2 class="product-title">{{ "Título del Producto" | uppercase }} </h2>
-        <div class="product-qty-price">
-          <p class="product-quantity">Cantidad: 1</p>
-          <p class="product-price">$10.00</p>
-        </div>
-      </div>
-      <button class="remove-button">X</button>
-    </div>
-    <!-- ...repetir para cada producto en el carrito... -->
-  </div>
+  }
+
+</div>

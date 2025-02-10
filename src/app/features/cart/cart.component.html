@@ -6,12 +6,18 @@
   <div class="divider"></div>
 
   <!-- ORDER LIST COMPONENT -->
-  <app-order-list></app-order-list>
+  @if (cartItems().length > 0) {
+    <app-order-list></app-order-list>
+  } @else {
+    <p class="empty-cart">No hay productos en el carrito</p>
+  }
 
   <div class="cart-footer">
     <div class="total-container">
       <p class="total-text">Total:</p>
-      <p class="total-price">$10.00</p>
+      <p class="total-price">
+        {{ getTotalPrice() }}
+      </p>
     </div>
     <div class="divider"></div>
     <button class="checkout-button">Comprar</button>

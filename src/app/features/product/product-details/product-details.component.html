@@ -9,18 +9,20 @@
     </div>
 
     <div class="image-primary">
-      <img src="https://dummyimage.com/640/fff/aaa" alt="Product Image" />
+      <img
+        [src]="product?.imagenURL"
+        [alt]="product?.nombre"
+        onerror="this.onerror=null;
+        this.src='assets/images/image-not-found.webp'"
+      />
     </div>
   </section>
 
   <aside class="product-details__content">
-    <h1 class="product-details__title">{{ "Product Title" | titlecase }}</h1>
-    <p class="product-details__price">{{ 123 | currency }}</p>
+    <h1 class="product-details__title">{{ product?.nombre | titlecase }}</h1>
+    <p class="product-details__price">{{ product?.precio | currency }}</p>
     <p class="product-details__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-      pariatur vitae atque fugiat illum sunt, ipsa ipsam quo voluptatum dolorem.
-      Eveniet, repellat itaque eum veritatis ipsam quia voluptatibus quidem
-      consectetur?
+      {{ product?.descripcion }}
     </p>
 
     <div class="divider"></div>

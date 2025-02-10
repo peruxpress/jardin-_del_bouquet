@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
-import { Product } from '../../../shared/models/product.interface';
+import { ProductService } from '../../../core/services/product/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,13 +9,12 @@ import { Product } from '../../../shared/models/product.interface';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss',
 })
-export class ProductListComponent {
-  product: Product = {
-    id: 1,
-    nombre: 'Producto 1',
-    descripcion: 'Descripción del producto 1',
-    precio: 100,
-    imagenURL: 'https://dummyimage.com/190/fff/aaa',
-    categoryId: 1,
-  };
+export class ProductListComponent implements OnInit {
+  productService = inject(ProductService);
+  products = this.productService.getProducts();
+
+  ngOnInit(): void {
+    this.productService.fetchProducts();
+    console.log(this.products);
+  }
 }
